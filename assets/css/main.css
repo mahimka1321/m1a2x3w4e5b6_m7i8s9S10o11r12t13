@@ -1,0 +1,409 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    font-family: 'Irish Grover', cursive;
+}
+
+body
+{
+    background: var(--clr);
+}
+
+.header_content
+{
+    width: 100%;
+    height: 50px;
+    background: #fff;
+    box-shadow: 0 5px 10px #000;
+}
+
+.logo
+{
+    display: flex;
+    margin-left: 5.5%;
+}
+
+.logo a
+{
+    margin-top: 5px;
+    margin-left: 5px;
+    text-decoration: none;
+    font-size: 28px; 
+    color: #000;
+}
+
+.naw_container
+{
+    position: absolute;
+    left: 50%;
+    top: 5px;
+    transform: translate(-50%);
+}
+
+.naw
+{
+    display: flex;
+    margin: 0 auto;
+    list-style: none;
+}
+
+.naw li
+{
+    margin-left: 40px;
+    font-size: 24px;
+}
+
+.naw li:hover
+{
+    border-bottom: 2px solid #000;
+    transition: .2s;
+}
+
+.naw li a
+{
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+
+.container_content
+{
+    position: absolute;
+    left: 50%;
+    top: 100px;
+    transform: translate(-50%);
+}
+
+.wrapper
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.txt_xatalog
+{
+    position: absolute;
+    left: 33%;
+    transform: translate(-50%);
+    top: -20px;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.wrapper_catalog
+{
+
+    display: grid;
+    margin: 0 auto;    
+    margin-top: 67px;
+    grid-template-columns: 1fr 1fr 1fr ;
+    max-width: 1144px;
+}
+
+.card
+{
+    position: relative;
+    cursor: pointer;
+    margin: 10px;
+    z-index: 1;
+}
+
+.name
+{
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.info p
+{
+    position: absolute;
+    left: 55px;
+    top: 145px;
+    text-align: left;
+    font-size: 24px;
+    color: #fff;
+}
+
+.card_active
+{
+    position: absolute;
+    width: 350px;
+    height: 250px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.45);
+    opacity: 0;
+    z-index: 10;
+}
+
+.card:hover .card_active
+{
+    opacity: 1;
+    transition: .5s;
+}
+
+button
+{
+    width: 95px;
+    height: 22px;
+    border: none;
+    background: #FFFFFF;
+    border-radius: 2px;
+    cursor: pointer;
+    padding-bottom: 24px;
+    font-size: 16px;
+}
+
+button:hover
+{
+    color: red;
+    transition: .5s;
+}
+
+.info button
+{
+    position: absolute;
+    left: 185px;
+    top: 185px;
+}
+
+.container_img
+{
+    width: 566px;
+    height: 829px;
+    margin-top: 77px;
+    margin-left: 20px;
+    background: url(../img/5.png);
+    filter: drop-shadow(-5px 10px 5px rgba(0, 0, 0, 0.25));
+}
+
+.container_contacts__con
+{
+    position: relative;
+}
+
+.txt_contacts
+{
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    padding-top: 10px;
+    color: #fff;   
+}
+
+.txt_contacts::before {
+    content: '';
+    position: absolute;
+    width: 50%;
+    background-color: #fff;
+    bottom: 360px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    height: 2px;
+    width: 150px;
+  }
+
+.container_map
+{
+    text-align: center;
+    padding-top: 75px;
+}
+
+.txt_map
+{
+    color: #fff;
+    margin: 10px;
+
+}
+
+.txt_map::before {
+    content: '';
+    position: absolute;
+    width: 50%;
+    background-color: #fff;
+    bottom: 282px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    height: 2px;
+    width: 120px;
+  }
+
+  .info_contacts
+  {
+      margin-left: 35px;
+      margin-top: 55px;
+  }
+
+  .info_contacts a
+  {
+      font-size: 29px;
+      color: #fff;
+      padding-top: 12px;
+      padding-left: 10px;
+      cursor: pointer;
+  }
+
+
+  @media (max-width: 1780px)
+  {
+    .wrapper
+    {
+        grid-template-columns: 1fr;
+    }
+    
+    .wrapper_catalog
+    {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .txt_xatalog
+    {  
+        left: 50%; 
+    }
+  }
+
+  @media (max-width: 1024px)
+  {
+
+    .logo
+    {
+        padding-top: 14px;
+    }
+
+    .logo a
+    {
+        font-size: 24px; 
+        margin-top: 10px;
+    }
+
+    .naw li
+    {
+        font-size: 20px;
+        margin-top: 5px;
+    }
+
+    .naw
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .naw_container
+    {
+        right: 50%;
+    }
+    
+    .header_content
+    {
+        height: 80px;
+    }
+  }
+
+
+  @media (max-width: 768px)
+  {
+    .wrapper_catalog
+    {
+        grid-template-columns: 1fr;
+    }
+
+    .container_img
+    {
+       width: 320px;
+       height: 597px;
+    }
+
+    .container_map
+    {
+        padding-top: 35px;
+        margin-left: 8px;
+    }
+
+    .wrapper_contact
+    {
+        margin-top: 65px;
+    }
+
+    .txt_contacts::before {
+        bottom: 257px;
+    }
+
+    .txt_map::before {
+        bottom: 202px;
+        left: 50.9%;
+    }
+
+    .container_map img
+    {
+        width: 282px;
+        height: 168px;
+    }
+
+    .info_contacts svg
+    {
+        width: 50px;
+        height: 50px;
+    }
+
+    .info_contacts
+    {
+        margin-top: 20px;
+    }
+
+    .info_contacts a 
+    {
+        font-size: 16px;
+    }
+
+  }
+
+  @media (max-width: 500px)
+  {
+    .logo a
+    {
+        display: none;
+    }
+    
+    .naw_container 
+    {
+      right: 0%;
+    }
+
+    .card img
+    {        
+        width: 294px;
+        height: 212px;
+
+    }
+
+    .card_active
+    {        
+        width: 286px;
+        height: 200px;
+        margin-left: -2px;
+    }
+
+    .container_contacts
+    {
+        margin-left: -30px;
+    }
+
+    .naw li 
+    {
+        margin-left: 25px;
+    }
+
+    .info p 
+    {
+        left: 30px;
+        top: 120px;
+    }
+    .info button 
+    {
+        left: 153px;
+        top: 160px;
+    }
+  }
